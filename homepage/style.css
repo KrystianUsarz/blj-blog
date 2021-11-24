@@ -1,0 +1,27 @@
+.layoutMessageBoxes{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.messageBox{
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    margin-top: 75px;
+    height: 300px;
+    width: 950px;
+}
+
+.userName{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.blogText{
+    display: flex;
+    justify-content: center;
+}
