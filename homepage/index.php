@@ -29,21 +29,18 @@ $pdo = new PDO('mysql:host=localhost;dbname=' . $database, $user, $password, [
         <?php include '../vorlage/blog-vorlage.php';?>
 
         <div class="layoutMessageBoxes">
-            <div class="messageBox">
             <?php
+            global $blogCount;
+            $blogCount = 0;
 
-                $stmt = $pdo->prepare('SELECT * FROM `blog` WHERE creator !!=');
-                $stmt->execute([':ID' => 0]);
-                
-                foreach($stmt->fetchAll() as $x) {
-                    var_dump($x);
-                }
-                
-            ?>
-                <p class="blogText">hallo zusammen dies ist mein erster Blogartikel ich hoffe mein 
-                    Kontent wird euch gefallen :)
-                </p>
-            </div>
+                $stmt = $pdo->query('SELECT * FROM `blog`');
+                foreach($stmt->fetchAll() as $task) {
+                    $blogCount++;?>
+                    <div class="messageBox">
+                    <h5 class="userName"><?php echo ($task['creator']) ?></h5>
+                    <p class="blogText"><?php echo ($task['context']) ?></p>
+                    </div>
+            <?php  } ?>
         </div>
     </body>
 
