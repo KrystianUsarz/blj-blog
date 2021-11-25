@@ -11,8 +11,8 @@
     background-color: whitesmoke;
     opacity: 0.8;
     margin-top: 75px;
-    height: 250px;
-    width: 800px;
+    height: 500px;
+    width: 900px;
 }
 
 .userName{
@@ -27,3 +27,33 @@
     justify-content: center;
     font-size: larger;
 }
+
+.dateAndTime{
+    margin-left: 20px;
+    font-size: medium;
+    font-style:oblique;
+}
+
+.commentOption{
+    margin-left: 20px;
+    margin-top: 30px ;
+}
+
+.commentText{
+margin-left: 20px;
+}
+
+.commentTitle{
+    margin-top:30px ;
+    margin-left: 20px;
+    font-size: large;
+}
+
+<script>
+<style>
+.red{
+color:red;
+}
+</style>
+<p class="red">hello</p>
+</script>

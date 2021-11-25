@@ -5,9 +5,9 @@ $errors = [];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $Username = trim($_POST['name'] ?? '');
-    $PostTitle = trim($_POST['title'] ?? '');
-    $Context = trim($_POST['text'] ?? '');
+    $Username = htmlspecialchars(trim($_POST['name'] ?? ''));
+    $PostTitle = htmlspecialchars(trim($_POST['title'] ?? ''));
+    $Context = htmlspecialchars(trim($_POST['text'] ?? ''));
 
     if ($Username === '') {
         $errors[] = 'Bitte geben Sie einen Benutzernamen ein.';
@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         <link rel="stylesheet" href="schreiben-style.css">
     </head>
 
-    <body>
+    <body  id="body">
         <?php include '../vorlage/blog-vorlage.php';?>
 
          <!-- Fehler aus Formular anzeigen -->
