@@ -1,3 +1,36 @@
+<?php 
+    include '../common/db.php';
+
+$errors = [];
+
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $Username = trim($_POST['name'] ?? '');
+    $PostTitle = trim($_POST['title'] ?? '');
+    $Context = trim($_POST['text'] ?? '');
+
+    if ($Username === '') {
+        $errors[] = 'Bitte geben Sie einen Benutzernamen ein.';
+    }
+
+    if ($PostTitle === '') {
+        $errors[] = 'Bitte geben Sie einen Titel ein.';
+    }
+
+    if ($Context === '') {
+        $errors[] = 'Bitte geben Sie ihren Text ein.';
+    }
+
+    if (count($errors) === 0) {
+        $stmt = $pdo->prepare('INSERT INTO blog (creator, context, create_date)
+        VALUES (:Username, :Context, now())');
+
+        $stmt->execute([':Username' => $Username, ':Context' => $Context]);
+
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,12 +46,39 @@
     <body>
         <?php include '../vorlage/blog-vorlage.php';?>
 
-        <div class="layoutMessageBoxes">
-            <div class="messageBox">
-                <h4 class="userName">Krystian<br><br></h4>
-                <p class="">hallo zusammen dies ist mein erster Blogartikel ich hoffe mein 
-                    Kontent wird euch gefallen :)
-                </p>
+         <!-- Fehler aus Formular anzeigen -->
+         <?php if (count($errors) > 0) { ?>
+            <div class="error-box">
+                <ul>
+                    <?php foreach ($errors as $error) { ?>
+                        <li><?= $error ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
+        <?php } ?>
+
+        <div class="formularLayout">
+            <div class="formular">
+                <form action="schreiben.php" method="post">
+                    <h1 id="title">Blogeintrag erstellen</h1>
+                    
+                    <div> 
+                        <label for="name">Bloggername</label>
+                        <input type="text" id="name" name="name" value="<?= $Username ?? '' ?>">
+                    </div>
+                   
+                    <div>
+                        <label for="title">Blogtitel</label>
+                        <input type="text" id="title" name="title" value="<?= $Title ?? '' ?>">
+                    </div>
+
+                    <div class="LayoutimFormular">
+                        <label for="text">Blogtext</label>
+                        <textarea class="TextBox" name="text" id="text" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <input class="btnPublish" type="submit" value="Blogeintrag publizieren">
+                </form>
             </div>
         </div>
     </body>

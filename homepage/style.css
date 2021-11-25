@@ -1,7 +1,7 @@
 .layoutMessageBoxes{
     display: flex;
-    margin: 0;
-    justify-content: center;
+    flex-direction: column-reverse;
+    margin-left: 28%;
     flex-wrap: wrap;
 }
 
@@ -11,8 +11,8 @@
     background-color: whitesmoke;
     opacity: 0.8;
     margin-top: 75px;
-    height: 300px;
-    width: 950px;
+    height: 250px;
+    width: 800px;
 }
 
 .userName{

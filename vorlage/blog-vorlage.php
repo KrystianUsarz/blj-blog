@@ -15,9 +15,9 @@
         </div>
         
         <div id="container">
-            <a href="http://10.20.18.107/blog/homepage/index.php">aktuelle Blogs</a>
-            <a href="http://10.20.18.107/blog/blog-schreiben/schreiben.php">aktuelle Blogs</a>
-            <a href="http://10.20.18.107/blog/andere-Blogseiten/andere-Blogs.php">aktuelle Blogs</a>       
+            <a class="nav" href="http://10.20.18.107/blog/homepage/index.php">aktuelle Blogs</a>
+            <a class="nav" href="http://10.20.18.107/blog/blog-schreiben/schreiben.php">Blog schreiben</a>
+            <a class="nav" href="http://10.20.18.107/blog/andere-Blogseiten/andere-Blogs.php">andere Blogseiten</a>       
         </div>
 
     </body>

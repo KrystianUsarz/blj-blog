@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     font-style:italic;
-    margin:0;
+    margin-top: 10px;
+    font-size: x-large;
 }
 
 .nav{
@@ -10,6 +11,9 @@
     justify-content: center;
     border: 2px solid black;
     padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
 }
 
 #container{
