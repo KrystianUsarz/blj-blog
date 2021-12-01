@@ -8,6 +8,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Username = htmlspecialchars(trim($_POST['name'] ?? ''));
     $PostTitle = htmlspecialchars(trim($_POST['title'] ?? ''));
     $Context = htmlspecialchars(trim($_POST['text'] ?? ''));
+    $PostImageUrl = htmlspecialchars(trim($_POST['url_link'] ?? ''));
 
     if ($Username === '') {
         $errors[] = 'Bitte geben Sie einen Benutzernamen ein.';
@@ -22,10 +23,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (count($errors) === 0) {
-        $stmt = $pdo->prepare('INSERT INTO blog (creator, context, create_date)
-        VALUES (:Username, :Context, now())');
+        $stmt = $pdo->prepare('INSERT INTO blog (creator, title, url, context, create_date)
+        VALUES (:Username, :Title, :Url, :Context, now())');
 
-        $stmt->execute([':Username' => $Username, ':Context' => $Context]);
+        $stmt->execute([':Username' => $Username, ':Title' => $PostTitle,':Url'=> $PostImageUrl, ':Context' => $Context]);
 
     }
 }
@@ -44,7 +45,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     </head>
 
     <body  id="body">
-        <?php include '../vorlage/blog-vorlage.php';?>
+
+    <?php include '../vorlage/blog-vorlage.php';?>        
 
          <!-- Fehler aus Formular anzeigen -->
          <?php if (count($errors) > 0) { ?>
@@ -70,6 +72,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div>
                         <label for="title">Blogtitel</label>
                         <input type="text" id="title" name="title" value="<?= $Title ?? '' ?>">
+                    </div>
+
+                    <div>
+                        <label for="url_link">Link zum Bild</label>
+                        <input type="url" id="url_link" name="url_link" pattern="data:image/.*" value="<?= $Url_Picture ?? '' ?>">
                     </div>
 
                     <div class="LayoutimFormular">

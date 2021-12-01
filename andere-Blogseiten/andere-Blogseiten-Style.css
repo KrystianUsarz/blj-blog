@@ -1,0 +1,21 @@
+.andereBlogs{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    background-color: white;
+    width: 500px;
+    height: 75px;
+    margin-top: 30px;
+    text-decoration: none;
+    color:black;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+.otherBlogs{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

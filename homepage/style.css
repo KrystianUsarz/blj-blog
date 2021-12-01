@@ -1,7 +1,7 @@
 .layoutMessageBoxes{
     display: flex;
     flex-direction: column-reverse;
-    margin-left: 28%;
+    margin-left: 26%;
     flex-wrap: wrap;
 }
 
@@ -11,7 +11,7 @@
     background-color: whitesmoke;
     opacity: 0.8;
     margin-top: 75px;
-    height: 500px;
+    height: auto;
     width: 900px;
 }
 
@@ -20,6 +20,14 @@
     justify-content: flex-start;
     margin-left: 20px;
     font-size: large;
+}
+
+.blogTitle{
+    display: flex;
+    justify-content:center;
+    font-size: larger;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .blogText{
@@ -40,7 +48,12 @@
 }
 
 .commentText{
+
 margin-left: 20px;
+margin-bottom: 20px;
+font-size: larger;
+font-style:unset;
+margin: 2px solid black;
 }
 
 .commentTitle{
@@ -49,11 +62,17 @@ margin-left: 20px;
     font-size: large;
 }
 
-<script>
-<style>
-.red{
-color:red;
+.btnCommentPublish{
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-</style>
-<p class="red">hello</p>
-</script>
+
+.error-box{
+    color: red;
+    background-color: rgb(250, 220, 220);
+    border: 1px solid red;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
