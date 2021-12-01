@@ -62,26 +62,38 @@
                     <?php if($task['url'] !== NULL) {?>
                     <img class="blogPicture" src="<?php echo ($task['url']) ?>">
                     <?php } ?>
-                    
+
                     <p class="blogText"><?php echo ($task['context']) ?></p>
 
-                    <?php $blogID = ($task['ID']) ?>
                     <p>
                     -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                     </p>
-                    <h5 class="commentTitle">Kommentare</h5>   
+                    <?php $blogID = ($task['ID']) ?>
 
-                    <form class="commentOption" action="" method="POST">
-                        <div>
-                            <label for="comment">Kommentieren</label>
-                            <textarea class="TextBox" name="comment" id="comment" cols="30" rows="4"></textarea>
-                            <input type="hidden" id="blogNR" name="blogNR" value="<?= $blogID?>">
-                        </div>
-                        <input class="btnCommentPublish" type="submit" value="Kommentar publizieren">
-                    </form>
+                    <div class="commentSection">
+                        <h5 class="commentTitle">Kommentare</h5>   
 
+                        <form class="commentOption" action="" method="POST">
+                            <div>
+                                <label for="comment">Kommentieren</label>
+                                <textarea class="TextBox" name="comment" id="comment" cols="30" rows="4"></textarea>
+                                <input type="hidden" id="blogNR" name="blogNR" value="<?= $blogID?>">
+                            </div>
+                            <input class="btnCommentPublish" type="submit" value="Kommentar publizieren">
+                        </form>
+
+                        <?php $stmt = $pdo->query('SELECT * FROM `comments`');
+                        foreach($stmt->fetchAll() as $commentTable){
+                            if($commentTable['blogFK'] === $task['ID']){?>
+                                <p class="commentText"><?php echo ($commentTable['comment'])?></p><?php
+                            }else{
+
+                            }
+                        }
+                        ?>
+                    </div>
                     
-
+                    
                 </div>
         <?php   }?>
         </div>
