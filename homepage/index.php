@@ -58,7 +58,11 @@
                     <h5 class="userName"><?php echo ($task['creator']) ?></h5>
                     <p class="dateAndTime"> created at:  <?php echo ($task['create_date']) ?></p>
                     <h6 class="blogTitle"><?php echo ($task['title']) ?></h6>
-                    <img src=“<?php echo ($task['url']) ?>“>   
+
+                    <?php if($task['url'] !== NULL) {?>
+                    <img class="blogPicture" src="<?php echo ($task['url']) ?>">
+                    <?php } ?>
+                    
                     <p class="blogText"><?php echo ($task['context']) ?></p>
 
                     <?php $blogID = ($task['ID']) ?>

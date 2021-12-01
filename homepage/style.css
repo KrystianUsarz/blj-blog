@@ -30,6 +30,11 @@
     margin-bottom: 20px;
 }
 
+.blogPicture{
+    margin-left: 205px;
+    height: 300px;
+    width: 500px;
+}
 .blogText{
     display: flex;
     justify-content: center;
