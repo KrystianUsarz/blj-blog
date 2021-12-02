@@ -1,4 +1,4 @@
-<?php include '../models/model-andere-Blogseiten.php' ?>
+<?php include './models/model-andere-Blogseiten.php' ?>
 
 <!DOCTYPE html>
 <html>
@@ -8,8 +8,8 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Krystians Blog</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel="stylesheet" href="../CSS/Blog-Vorlage-Style.css">
-        <link rel="stylesheet" href="../CSS/andere-Blogseiten-Style.css">
+        <link rel="stylesheet" href="./CSS/Blog-Vorlage-Style.css">
+        <link rel="stylesheet" href="./CSS/andere-Blogseiten-Style.css">
     </head>
 
     <body id="body">
@@ -28,7 +28,9 @@
             }
             ?>
         </div>
-    
+        <div class="footer">
+            <?php  include 'view-footer.php'; ?>
+        </div>
     </body>
 
 </html>

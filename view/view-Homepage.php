@@ -1,4 +1,4 @@
-<?php include '../models/model-Homepage.php' ?> 
+<?php include './models/model-Homepage.php' ?> 
 
 <!DOCTYPE html>
 <html>
@@ -8,8 +8,8 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Krystians Blog</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel="stylesheet" href="../CSS/Blog-Vorlage-Style.css">
-        <link rel="stylesheet" href="../CSS/Homepage-Style.css">
+        <link rel="stylesheet" href="./CSS/Blog-Vorlage-Style.css">
+        <link rel="stylesheet" href="./CSS/Homepage-Style.css">
     </head>
 
     <body id="body">

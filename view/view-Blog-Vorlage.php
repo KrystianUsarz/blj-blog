@@ -4,8 +4,8 @@
     </div>
         
     <div id="container">
-        <a class="nav" href="http://10.20.18.113/blog/homepage/index.php">aktuelle Blogs</a>
-        <a class="nav" href="http://10.20.18.113/blog/blog-schreiben/schreiben.php">Blog schreiben</a>
-        <a class="nav" href="http://10.20.18.113/blog/andere-Blogseiten/andere-Blogs.php">andere Blogseiten</a>       
+        <a class="nav" href="index.php">aktuelle Blogs</a>
+        <a class="nav" href="index.php?page=create-Blog">Blog schreiben</a>
+        <a class="nav" href="index.php?page=other-Blogs">andere Blogseiten</a>       
     </div>
 </div>
