@@ -4,6 +4,7 @@
     font-style:italic;
     margin-top: 10px;
     font-size: x-large;
+
 }
 
 .nav{
@@ -14,12 +15,18 @@
     text-decoration: none;
     color: black;
     margin-top: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 #container{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    background-color: white;
+    border-radius: 20px;
+    border:2px solid black;
+    opacity: 0.8;
 }
 
 #body{

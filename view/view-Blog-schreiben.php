@@ -29,7 +29,7 @@
 
         <div class="formularLayout">
             <div class="formular">
-                <form action="schreiben.php" method="post">
+                <form action="index.php?page=create-Blog" method="POST">
                     <h1 id="title">Blogeintrag erstellen</h1>
                     
                     <div> 

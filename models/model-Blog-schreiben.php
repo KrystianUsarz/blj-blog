@@ -9,6 +9,15 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Context = htmlspecialchars(trim($_POST['text'] ?? ''));
     $PostImageUrl = htmlspecialchars(trim($_POST['url_link'] ?? ''));
 
+    $needle = " ";
+
+    if(strpos( $Context, $needle, $offset = 1) === false && strlen($Context) > 30){
+        $errors[] = 'Bitte schreiben sie einen Sinnvollen Blog';
+    }
+    else{
+
+    }
+
     if ($Username === '') {
         $errors[] = 'Bitte geben Sie einen Benutzernamen ein.';
     }
