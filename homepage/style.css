@@ -39,6 +39,8 @@
     display: flex;
     justify-content: center;
     font-size: larger;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .dateAndTime{
@@ -59,11 +61,11 @@
 }
 
 .commentText{
-margin-left: 20px;
-margin-bottom: 20px;
-font-size: larger;
-font-style:unset;
-margin: 2px solid black;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: larger;
+    font-style:unset;
+    margin: 2px solid black;
 }
 
 .commentTitle{
@@ -75,6 +77,15 @@ margin: 2px solid black;
 .btnCommentPublish{
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+.likeDislike{
+    display: flex;
+    flex-direction: row;
+}
+
+.btnLike{
+    margin-left: 30px;
 }
 
 .error-box{

@@ -24,7 +24,7 @@ $pdo = new PDO('mysql:host=mysql2.webland.ch;dbname=d041e_dagomez', 'd041e_dagom
 
         <?php include '../vorlage/blog-vorlage.php'; ?>
 
-        <div class="otherBlogs">
+        <div class="layout">
             <?php
             $stmt = $pdo->query('SELECT description, url from urls order by description asc');
 

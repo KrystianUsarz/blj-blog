@@ -23,8 +23,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (count($errors) === 0) {
-        $stmt = $pdo->prepare('INSERT INTO blog (creator, title, url, context, create_date)
-        VALUES (:Username, :Title, :Url, :Context, now())');
+        $stmt = $pdo->prepare('INSERT INTO blog (creator, title, url, context, create_date, likes, dislikes)
+        VALUES (:Username, :Title, :Url, :Context, now(), 0, 0)');
 
         $stmt->execute([':Username' => $Username, ':Title' => $PostTitle,':Url'=> $PostImageUrl, ':Context' => $Context]);
 
