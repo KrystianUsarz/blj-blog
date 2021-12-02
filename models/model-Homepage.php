@@ -1,5 +1,5 @@
 <?php 
-    include '../common/db.php';
+    include 'model-db-Verbindung.php';
     $comment = '';
     $like = false;
     $dislike = false;

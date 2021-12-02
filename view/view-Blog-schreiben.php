@@ -1,3 +1,5 @@
+<?php  include '../models/model-Blog-schreiben.php' ?>        
+
 <!DOCTYPE html>
 <html>
 
@@ -6,13 +8,13 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Krystians Blog</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel="stylesheet" href="../vorlage/blog-vorlage.css">
-        <link rel="stylesheet" href="schreiben-style.css">
+        <link rel="stylesheet" href="../CSS/Blog-Vorlage-Style.css">
+        <link rel="stylesheet" href="../CSS/Blog-schreiben-Style.css">
     </head>
 
     <body  id="body">
 
-    <?php include '../vorlage/blog-vorlage.php';?>        
+    <?php  include 'view-Blog-Vorlage.php' ?>        
 
          <!-- Fehler aus Formular anzeigen -->
          <?php if (count($errors) > 0) { ?>

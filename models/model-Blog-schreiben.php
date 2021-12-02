@@ -1,6 +1,5 @@
 <?php 
-    include '../common/db.php';
-
+    include 'model-db-Verbindung.php';
 $errors = [];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
