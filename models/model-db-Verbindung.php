@@ -3,7 +3,7 @@
     $password = '54321_Db!!!'  ;
     $database = 'd041e_krusarz';
 
-    $pdo = new PDO('mysql:host=mysql2adm.webland.ch;dbname=' . $database, $user, $password, [
+    $pdo = new PDO('mysql:host=mysql2.webland.ch;dbname=' . $database, $user, $password, [
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
